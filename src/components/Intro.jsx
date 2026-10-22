@@ -1,43 +1,48 @@
 import React from "react";
-import "../styles/Intro.css";
 import { TypeAnimation } from "react-type-animation";
-import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
-import FadeInSection from "./FadeInSection";
-import AsciiPortrait from "./AsciiPortrait";
+import InteractiveReducer from "./InteractiveReducer";
 
 const Intro = () => {
   return (
-    <div id="intro">
-      <div className="intro-simulation">
-        <AsciiPortrait />
-      </div>
-      <div className="intro-block">
-        <div className="intro-title">
-          {"hi, "}
-          <span className="intro-name">
+    <section id="intro" className="hero section-container">
+      <div className="hero-content">
+        <p className="eyebrow">PRODUCTION ENGINEERING · OPERATIONS · TECHNOLOGY</p>
+        <h1 className="hero-title">
+          Hi, I’m{" "}
+          <span className="accent-text hero-animated-name">
             <TypeAnimation
-              sequence={["gazi"]}
+              sequence={["Aerickson."]}
               wrapper="span"
+              speed={48}
               cursor={false}
               repeat={0}
             />
+            <span className="hero-cursor" aria-hidden="true">|</span>
           </span>
-          {" here."}
-          <span className="intro-cursor">|</span>
-        </div>
-        <FadeInSection>
-          <div className="intro-desc">
-            Software engineer and artist in New York City. I build ML models at
-            Google by day and make strange little projects at the intersection
-            of tech and art by night. Occasionally both happen at the same time.
-          </div>
-          <a href="mailto:gazijarin@gmail.com" className="intro-contact">
-            <EmailRoundedIcon />
-            {" Say hi!"}
+        </h1>
+        <h2>Production Engineering Trainee based in Curitiba, Brazil.</h2>
+        <p className="hero-description">
+          At Serra da Prada, I’m developing an ERP system and supporting
+          Production Planning and Control (PPC). I also work directly on the
+          factory floor, helping track maintenance and manufacturing work
+          orders and record working hours across production areas.
+        </p>
+        <div className="hero-actions">
+          <a className="button button-primary" href="#projects">
+            Explore my projects <span aria-hidden="true">↓</span>
           </a>
-        </FadeInSection>
+          <a
+            className="button button-secondary"
+            href="https://github.com/aericksonnbruno"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View GitHub ↗
+          </a>
+        </div>
       </div>
-    </div>
+      <InteractiveReducer />
+    </section>
   );
 };
 

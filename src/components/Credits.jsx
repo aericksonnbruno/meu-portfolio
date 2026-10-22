@@ -1,18 +1,15 @@
 import React from "react";
-import "../styles/Credits.css";
-import FadeInSection from "./FadeInSection";
 
-const Credits = () => {
-  return (
-    <FadeInSection>
-      <div id="credits">
-        <div className="ending-credits">
-          <div>Built and designed by Gazi Jarin. </div>
-          <div>All rights reserved. ©</div>
-        </div>
-      </div>
-    </FadeInSection>
-  );
-};
+const Credits = () => (
+  <footer className="site-footer">
+    <div className="footer-inner">
+      <a className="brand footer-brand" href="#intro">AB<span>.</span></a>
+      <p>Designed and built for Aerickson Bruno.</p>
+      <a href="https://github.com/aericksonnbruno" target="_blank" rel="noopener noreferrer">
+        GitHub ↗
+      </a>
+    </div>
+  </footer>
+);
 
 export default Credits;
